@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="546.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.metlife.Alfesani.User3PolicymanagerController">
+   <children>
+      <Button layoutX="29.0" layoutY="95.0" mnemonicParsing="false" text="G1" />
+      <Button layoutX="29.0" layoutY="137.0" mnemonicParsing="false" text="G2" />
+      <Button layoutX="29.0" layoutY="175.0" mnemonicParsing="false" text="G3" />
+      <Button layoutX="29.0" layoutY="210.0" mnemonicParsing="false" text="G4" />
+      <Button layoutX="29.0" layoutY="248.0" mnemonicParsing="false" text="G5" />
+      <Button layoutX="29.0" layoutY="285.0" mnemonicParsing="false" text="G6" />
+      <Button layoutX="29.0" layoutY="326.0" mnemonicParsing="false" text="G7" />
+      <Button layoutX="29.0" layoutY="365.0" mnemonicParsing="false" text="G8" />
+      <Text fill="#f20b0b" layoutX="30.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Goals">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text layoutX="169.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Policy Manager DashBoard">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text layoutX="147.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&lt;--- Click Any Gola to procced next Stage" wrappingWidth="403.818359375">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
