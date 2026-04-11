@@ -1,4 +1,4 @@
-package com.example.metlife;
+package com.example.metlife.Suzana;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
