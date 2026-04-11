@@ -6,4 +6,7 @@ module com.example.metlife {
 
     opens com.example.metlife to javafx.fxml;
     exports com.example.metlife;
+
+    opens com.example.metlife.nisha to javafx.fxml;
+    exports com.example.metlife.nisha;
 }

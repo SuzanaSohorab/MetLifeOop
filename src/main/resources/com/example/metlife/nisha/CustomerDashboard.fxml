@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="600.0" style="-fx-background-color: #555555;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.metlife.nisha.CustomerDashboardController">
+    <children>
+        <VBox alignment="TOP_CENTER" layoutX="100.0" layoutY="40.0" prefHeight="620.0" prefWidth="400.0" spacing="12.0" style="-fx-background-color: #FFFFFF; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0, 0, 0); -fx-background-radius: 3;">
+            <padding>
+                <Insets bottom="30.0" left="40.0" right="40.0" top="30.0" />
+            </padding>
+            <children>
+                <Label text="Customer Dashboard">
+                    <font>
+                        <Font name="System Bold" size="22.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets bottom="15.0" />
+                    </VBox.margin>
+                </Label>
+                <VBox alignment="CENTER_LEFT" spacing="5.0">
+                    <children>
+                        <Label text="Welcome, Customer" />
+                        <Label text="Select an action:">
+                            <VBox.margin>
+                                <Insets bottom="10.0" />
+                            </VBox.margin>
+                        </Label>
+                    </children>
+                </VBox>
+
+                <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#openPolicyManagement" text="Policy Management" />
+
+                <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#openPayPremium" text="Pay Premium" />
+
+                <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#openUpdateContact" text="Update Contact" />
+
+                <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#openFileClaim" text="File a Claim" />
+
+                <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#openDownloadDocuments" text="Documents &amp; Statements" />
+
+                <Button mnemonicParsing="false" onAction="#handleLogout" text="Logout">
+                    <VBox.margin>
+                        <Insets top="25.0" />
+                    </VBox.margin>
+                    <padding>
+                        <Insets bottom="5.0" left="20.0" right="20.0" top="5.0" />
+                    </padding>
+                </Button>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
