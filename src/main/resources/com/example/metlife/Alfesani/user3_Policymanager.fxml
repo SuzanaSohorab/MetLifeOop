@@ -5,18 +5,17 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane prefHeight="546.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.metlife.Alfesani.User3PolicymanagerController">
+<AnchorPane prefHeight="546.0" prefWidth="616.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.metlife.Alfesani.User3PolicymanagerController">
    <children>
-      <Button layoutX="29.0" layoutY="95.0" mnemonicParsing="false" text="G1" />
-      <Button layoutX="29.0" layoutY="137.0" mnemonicParsing="false" text="G2" />
-      <Button layoutX="29.0" layoutY="175.0" mnemonicParsing="false" text="G3" />
-      <Button layoutX="29.0" layoutY="210.0" mnemonicParsing="false" text="G4" />
-      <Button layoutX="29.0" layoutY="248.0" mnemonicParsing="false" text="G5" />
-      <Button layoutX="29.0" layoutY="285.0" mnemonicParsing="false" text="G6" />
-      <Button layoutX="29.0" layoutY="326.0" mnemonicParsing="false" text="G7" />
-      <Button layoutX="29.0" layoutY="365.0" mnemonicParsing="false" text="G8" />
-      <Text fill="#f20b0b" layoutX="30.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Goals">
+      <Button layoutX="255.0" layoutY="137.0" mnemonicParsing="false" onAction="#managPolicy" text="Mange Policy Data" />
+      <Button layoutX="255.0" layoutY="180.0" mnemonicParsing="false" onAction="#updatePolicy" text="Update Policy Details" />
+      <Button layoutX="255.0" layoutY="223.0" mnemonicParsing="false" onAction="#suspendPolicy" text="Suspend Policy" />
+      <Button layoutX="255.0" layoutY="261.0" mnemonicParsing="false" onAction="#ApprovePolicy" text="Approve policy Changes" />
+      <Button layoutX="255.0" layoutY="310.0" mnemonicParsing="false" onAction="#assignPolicy" text="Assign Policy To Agent" />
+      <Button layoutX="255.0" layoutY="348.0" mnemonicParsing="false" onAction="#viewPolicy" text="View Policy Perfomance Repot " />
+      <Button layoutX="255.0" layoutY="390.0" mnemonicParsing="false" onAction="#deactivateExpired" text="Deactivate Expired Policies" />
+      <Button layoutX="255.0" layoutY="430.0" mnemonicParsing="false" onAction="#auditPolicy" text="Audit Policy Changes" />
+      <Text fill="#f20b0b" layoutX="262.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Goals">
          <font>
             <Font size="20.0" />
          </font>
@@ -24,11 +23,6 @@
       <Text layoutX="169.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Policy Manager DashBoard">
          <font>
             <Font size="24.0" />
-         </font>
-      </Text>
-      <Text layoutX="147.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&lt;--- Click Any Gola to procced next Stage" wrappingWidth="403.818359375">
-         <font>
-            <Font size="20.0" />
          </font>
       </Text>
    </children>

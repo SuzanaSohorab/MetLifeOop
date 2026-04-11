@@ -10,18 +10,18 @@
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.metlife.Alfesani.User3G3Controller">
    <children>
       <Text layoutX="69.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Active Policy" />
-      <TableView layoutX="182.0" layoutY="100.0" prefHeight="200.0" prefWidth="200.0">
+      <TableView fx:id="g3tableView" layoutX="182.0" layoutY="100.0" prefHeight="200.0" prefWidth="200.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="C1" />
-          <TableColumn prefWidth="75.0" text="C2" />
+          <TableColumn fx:id="G3idcol" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="G3namecol" prefWidth="75.0" text="Name" />
         </columns>
       </TableView>
-      <Button layoutX="248.0" layoutY="326.0" mnemonicParsing="false" text="Suspend" />
+      <Button layoutX="248.0" layoutY="326.0" mnemonicParsing="false" onAction="#suspendOnclick" text="Suspend" />
       <Text layoutX="203.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="G3: Suspend a Policy">
          <font>
             <Font size="20.0" />
          </font>
       </Text>
-      <Button layoutX="57.0" layoutY="326.0" mnemonicParsing="false" text="back" />
+      <Button layoutX="57.0" layoutY="326.0" mnemonicParsing="false" onAction="#backdashboard" text="back" />
    </children>
 </AnchorPane>

@@ -4,28 +4,32 @@
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.metlife.Alfesani.User4G2Controller">
+<AnchorPane prefHeight="615.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.metlife.Alfesani.User4G2Controller">
    <children>
       <Text layoutX="116.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Goal-2: Generate Monthly Revenue Report">
          <font>
             <Font size="20.0" />
          </font>
       </Text>
-      <DatePicker layoutX="153.0" layoutY="72.0" />
-      <TableView layoutX="166.0" layoutY="121.0" prefHeight="200.0" prefWidth="200.0">
+      <DatePicker fx:id="g2datepciker" layoutX="153.0" layoutY="72.0" />
+      <TableView fx:id="goal2Tableview" layoutX="166.0" layoutY="121.0" prefHeight="200.0" prefWidth="200.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="C1" />
-          <TableColumn prefWidth="75.0" text="C2" />
+          <TableColumn fx:id="goal2Idcol" prefWidth="101.0" text="ID" />
+          <TableColumn fx:id="Goal2Namecol" prefWidth="98.0" text="Name" />
         </columns>
       </TableView>
-      <Button layoutX="27.0" layoutY="350.0" mnemonicParsing="false" text="Back" />
-      <Button layoutX="214.0" layoutY="350.0" mnemonicParsing="false" text="Generate PDF" />
+      <Button layoutX="22.0" layoutY="555.0" mnemonicParsing="false" onAction="#backdashboard" text="Back" />
+      <Button layoutX="222.0" layoutY="478.0" mnemonicParsing="false" onAction="#generateOnclick" text="Generate PDF" />
       <Text layoutX="68.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pick Date" />
       <Text layoutX="22.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Earning of this month" />
+      <Text layoutX="43.0" layoutY="364.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID" />
+      <Text layoutX="38.0" layoutY="410.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />
+      <TextField fx:id="newIdtextfield" layoutX="92.0" layoutY="347.0" />
+      <TextField fx:id="newNametextfield" layoutX="92.0" layoutY="393.0" />
    </children>
 </AnchorPane>

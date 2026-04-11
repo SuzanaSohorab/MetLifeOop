@@ -8,23 +8,25 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.metlife.Alfesani.User4G7Controller">
+<AnchorPane prefHeight="519.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.metlife.Alfesani.User4G7Controller">
    <children>
       <Text layoutX="130.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Goal-7: Track Financial Transactions">
          <font>
             <Font size="20.0" />
          </font>
       </Text>
-      <TableView layoutX="187.0" layoutY="85.0" prefHeight="200.0" prefWidth="200.0">
+      <TableView fx:id="goal7Tableview" layoutX="187.0" layoutY="85.0" prefHeight="200.0" prefWidth="200.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="C1" />
-          <TableColumn prefWidth="75.0" text="C2" />
+          <TableColumn fx:id="goal7nameCol" prefWidth="91.0" text="Name" />
+          <TableColumn fx:id="goal7IDcol" prefWidth="59.0" text="ID" />
         </columns>
       </TableView>
       <Text layoutX="82.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Transaction" />
       <Text layoutX="78.0" layoutY="322.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Transaction Filter Id" />
-      <TextField layoutX="212.0" layoutY="305.0" />
-      <Button layoutX="30.0" layoutY="361.0" mnemonicParsing="false" text="Back" />
+      <TextField fx:id="filterTextfield" layoutX="212.0" layoutY="305.0" />
+      <Button layoutX="28.0" layoutY="460.0" mnemonicParsing="false" onAction="#backdashboard" text="Back" />
+      <Button layoutX="212.0" layoutY="415.0" mnemonicParsing="false" onAction="#ShowOnclick" text="Show" />
+      <Text layoutX="82.0" layoutY="370.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Transaction Name" />
+      <TextField fx:id="NewnametextField" layoutX="212.0" layoutY="353.0" />
    </children>
 </AnchorPane>

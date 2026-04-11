@@ -3,19 +3,22 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.metlife.Alfesani.User3G7Controller">
    <children>
       <Text layoutX="83.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Expired List" />
-      <TableView layoutX="214.0" layoutY="31.0" prefHeight="200.0" prefWidth="200.0">
+      <TableView fx:id="G7Tableview" layoutX="214.0" layoutY="31.0" prefHeight="200.0" prefWidth="200.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="C1" />
-          <TableColumn prefWidth="75.0" text="C2" />
+          <TableColumn fx:id="g7idCol" prefWidth="75.0" text="Policy Id" />
+          <TableColumn fx:id="g7dateCol" prefWidth="75.0" text="Expiry Date" />
         </columns>
       </TableView>
-      <Button layoutX="236.0" layoutY="305.0" mnemonicParsing="false" text="Confirm Deactivation" />
-      <Button layoutX="68.0" layoutY="305.0" mnemonicParsing="false" text="back" />
+      <Button layoutX="236.0" layoutY="305.0" mnemonicParsing="false" onAction="#confirmOnclick" text="Confirm Deactivation" />
+      <Button layoutX="68.0" layoutY="305.0" mnemonicParsing="false" onAction="#backdashboard" text="back" />
+      <Text layoutX="102.0" layoutY="257.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID" />
+      <TextField fx:id="newIDtextfield" layoutX="131.0" layoutY="240.0" />
    </children>
 </AnchorPane>

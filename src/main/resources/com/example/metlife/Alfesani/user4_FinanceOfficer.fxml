@@ -5,28 +5,22 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.metlife.Alfesani.User4FinanceOfficerController">
+<AnchorPane prefHeight="530.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.metlife.Alfesani.User4FinanceOfficerController">
    <children>
-      <Text fill="#f20101" layoutX="202.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User: 4 ------Finance Officer" wrappingWidth="197.0">
+      <Text fill="#f20101" layoutX="221.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Finance Officer" wrappingWidth="159.0">
          <font>
-            <Font size="16.0" />
+            <Font size="21.0" />
          </font>
       </Text>
-      <Text layoutX="137.0" layoutY="159.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&lt;-- Click Any goal to procced next page!!">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Text>
-      <Button layoutX="35.0" layoutY="72.0" mnemonicParsing="false" text="G1" />
-      <Button layoutX="35.0" layoutY="106.0" mnemonicParsing="false" text="G2" />
-      <Button layoutX="35.0" layoutY="140.0" mnemonicParsing="false" text="G3" />
-      <Button layoutX="35.0" layoutY="175.0" mnemonicParsing="false" text="G4" />
-      <Button layoutX="35.0" layoutY="214.0" mnemonicParsing="false" text="G5" />
-      <Button layoutX="35.0" layoutY="252.0" mnemonicParsing="false" text="G6" />
-      <Button layoutX="35.0" layoutY="289.0" mnemonicParsing="false" text="G7" />
-      <Button layoutX="35.0" layoutY="332.0" mnemonicParsing="false" text="G8" />
-      <Text fill="#2806ee" fontSmoothingType="LCD" layoutX="35.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Goals">
+      <Button layoutX="221.0" layoutY="109.0" mnemonicParsing="false" onAction="#managePrem" text="Manage Premium Payments" />
+      <Button layoutX="218.0" layoutY="161.0" mnemonicParsing="false" onAction="#GenerateMon" text="Generate Monthly revenue Report" />
+      <Button layoutX="229.0" layoutY="198.0" mnemonicParsing="false" onAction="#verifyrRef" text="Verify Refund Revenue Report" />
+      <Button layoutX="233.0" layoutY="240.0" mnemonicParsing="false" onAction="#updatePay" text="Update payment Status" />
+      <Button layoutX="245.0" layoutY="282.0" mnemonicParsing="false" onAction="#calculateLate" text="Calculate Late Fees" />
+      <Button layoutX="219.0" layoutY="328.0" mnemonicParsing="false" onAction="#approveCom" text="Approve Commission Payout" />
+      <Button layoutX="223.0" layoutY="377.0" mnemonicParsing="false" onAction="#trackFinan" text="Track Financial Transactions" />
+      <Button layoutX="236.0" layoutY="422.0" mnemonicParsing="false" onAction="#auditFinan" text="Audit Financial records" />
+      <Text fill="#2806ee" fontSmoothingType="LCD" layoutX="265.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Goals">
          <font>
             <Font size="21.0" />
          </font>

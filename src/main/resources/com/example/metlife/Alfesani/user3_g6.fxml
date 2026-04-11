@@ -4,21 +4,24 @@
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.metlife.Alfesani.User3G6Controller">
+<AnchorPane prefHeight="496.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.metlife.Alfesani.User3G6Controller">
    <children>
-      <ComboBox layoutX="209.0" layoutY="40.0" prefWidth="150.0" />
-      <Text layoutX="56.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Avaible Agent list " />
+      <ComboBox fx:id="g6Combobox" layoutX="209.0" layoutY="40.0" prefWidth="150.0" />
+      <Text layoutX="56.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Available Agent list " />
       <Text layoutX="67.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Remain Policy" />
-      <TableView layoutX="184.0" layoutY="100.0" prefHeight="200.0" prefWidth="200.0">
+      <TableView fx:id="G6tableview" layoutX="184.0" layoutY="100.0" prefHeight="200.0" prefWidth="200.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="C1" />
-          <TableColumn prefWidth="75.0" text="C2" />
+          <TableColumn fx:id="g6idcol" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="g6clientcol" prefWidth="120.0" text="Client Name" />
         </columns>
       </TableView>
-      <Button layoutX="258.0" layoutY="341.0" mnemonicParsing="false" text="Assign Now" />
-      <Button layoutX="56.0" layoutY="329.0" mnemonicParsing="false" text="back" />
+      <Button layoutX="261.0" layoutY="398.0" mnemonicParsing="false" onAction="#assignOnclick" text="Assign Now" />
+      <Button layoutX="26.0" layoutY="437.0" mnemonicParsing="false" onAction="#backdashboard" text="back" />
+      <Text layoutX="104.0" layoutY="346.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />
+      <TextField fx:id="clientnameTextfield" layoutX="161.0" layoutY="329.0" />
    </children>
 </AnchorPane>

@@ -7,7 +7,6 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.metlife.Alfesani.User4G3Controller">
    <children>
       <Text layoutX="163.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Goal-3: Verify Refund Requests">
@@ -16,13 +15,13 @@
          </font>
       </Text>
       <Text layoutX="45.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0" text="This Month Earning: " />
-      <TableView layoutX="186.0" layoutY="93.0" prefHeight="200.0" prefWidth="200.0">
+      <TableView fx:id="goal3tableview" layoutX="186.0" layoutY="93.0" prefHeight="200.0" prefWidth="200.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="C1" />
-          <TableColumn prefWidth="75.0" text="C2" />
+          <TableColumn fx:id="goal3iDcol" prefWidth="102.0" text="ID" />
+          <TableColumn fx:id="goal3Namecol" prefWidth="88.0" text="Name" />
         </columns>
       </TableView>
-      <Button layoutX="45.0" layoutY="332.0" mnemonicParsing="false" text="Back" />
-      <Button layoutX="236.0" layoutY="332.0" mnemonicParsing="false" text="Verify" />
+      <Button layoutX="45.0" layoutY="332.0" mnemonicParsing="false" onAction="#backdashboard" text="Back" />
+      <Button layoutX="236.0" layoutY="332.0" mnemonicParsing="false" onAction="#verifyOnclick" text="Verify" />
    </children>
 </AnchorPane>
