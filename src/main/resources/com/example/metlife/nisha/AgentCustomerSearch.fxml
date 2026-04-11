@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="850.0" prefWidth="1000.0" style="-fx-background-color: #4A4A4A;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.metlife.nisha.AgentCustomerSearchController">
+    <children>
+        <VBox layoutX="50.0" layoutY="30.0" prefHeight="790.0" prefWidth="900.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 8; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0, 0, 0);">
+            <children>
+
+                <HBox alignment="CENTER_RIGHT" prefHeight="40.0" prefWidth="900.0">
+                    <children>
+                        <Label text="Customer Search &amp; Support" textFill="#888888">
+                            <font>
+                                <Font name="System Bold Italic" size="16.0" />
+                            </font>
+                        </Label>
+                    </children>
+                    <padding>
+                        <Insets right="30.0" top="15.0" />
+                    </padding>
+                </HBox>
+
+                <TabPane prefHeight="670.0" prefWidth="900.0" tabClosingPolicy="UNAVAILABLE" VBox.vgrow="ALWAYS">
+                    <tabs>
+
+                        <Tab text="Handle Policy Upgrades">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                    <children>
+                                        <VBox layoutX="30.0" layoutY="20.0" prefHeight="600.0" prefWidth="840.0" spacing="15.0">
+                                            <children>
+                                                <Label text="Customers Requesting Upgrades">
+                                                    <font><Font name="System Bold" size="22.0" /></font>
+                                                </Label>
+                                                <Separator prefWidth="840.0" />
+
+                                                <TableView fx:id="upgradeTable" prefHeight="300.0" prefWidth="840.0">
+                                                    <columnResizePolicy>
+                                                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                                    </columnResizePolicy>
+                                                    <columns>
+                                                        <TableColumn fx:id="colUpdCustomer" prefWidth="200.0" text="Customer Name" />
+                                                        <TableColumn fx:id="colUpdCurrent" prefWidth="200.0" text="Current Policy" />
+                                                        <TableColumn fx:id="colUpdRequested" prefWidth="200.0" text="Upgrade Requested" />
+                                                    </columns>
+                                                </TableView>
+
+                                                <GridPane hgap="15.0" vgap="10.0">
+                                                    <columnConstraints>
+                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="150.0" prefWidth="180.0" />
+                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="200.0" prefWidth="300.0" />
+                                                    </columnConstraints>
+                                                    <children>
+                                                        <Label style="-fx-font-weight: bold;" text="Calculated New Coverage:" />
+                                                        <TextField fx:id="newCoverageField" promptText="Enter new coverage amount" GridPane.columnIndex="1" />
+                                                        <Label style="-fx-font-weight: bold;" text="Calculated New Premium:" GridPane.rowIndex="1" />
+                                                        <TextField fx:id="newPremiumField" promptText="Enter new monthly premium" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                    </children>
+                                                    <rowConstraints>
+                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                                                    </rowConstraints>
+                                                </GridPane>
+
+                                                <HBox alignment="CENTER_RIGHT" spacing="15.0">
+                                                    <children>
+                                                        <Button mnemonicParsing="false" onAction="#sendUpgradeProposal" prefHeight="40.0" prefWidth="220.0" style="-fx-background-color: #2196F3; -fx-text-fill: white; -fx-font-weight: bold;" text="Send Upgrade Proposal" />
+                                                    </children>
+                                                    <VBox.margin><Insets top="10.0" /></VBox.margin>
+                                                </HBox>
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+
+                        <Tab text="Assist with Claim">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                    <children>
+                                        <VBox layoutX="30.0" layoutY="20.0" prefHeight="600.0" prefWidth="840.0" spacing="15.0">
+                                            <children>
+                                                <Label text="Submit Claim on Behalf of Customer">
+                                                    <font><Font name="System Bold" size="22.0" /></font>
+                                                </Label>
+                                                <Separator prefWidth="840.0" />
+
+                                                <HBox alignment="CENTER_LEFT" spacing="15.0">
+                                                    <children>
+                                                        <Label style="-fx-font-weight: bold;" text="Customer Policy Number:" />
+                                                        <TextField fx:id="claimPolicySearchField" prefWidth="200.0" promptText="e.g. POL-123" />
+                                                        <Button mnemonicParsing="false" onAction="#fetchPolicyForClaim" text="Fetch Details" />
+                                                    </children>
+                                                </HBox>
+
+                                                <Separator prefWidth="840.0" />
+
+                                                <GridPane hgap="15.0" vgap="15.0">
+                                                    <columnConstraints>
+                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="150.0" prefWidth="180.0" />
+                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="200.0" prefWidth="500.0" />
+                                                    </columnConstraints>
+                                                    <children>
+                                                        <Label text="Incident Details:" />
+                                                        <TextArea fx:id="incidentDetailsArea" prefHeight="80.0" promptText="Describe the incident..." wrapText="true" GridPane.columnIndex="1" />
+
+                                                        <Label text="Claim Amount (Taka):" GridPane.rowIndex="1" />
+                                                        <TextField fx:id="claimAmountField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                                                        <Label text="Upload Documents/Photos:" GridPane.rowIndex="2" />
+                                                        <HBox spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                            <children>
+                                                                <TextField editable="false" promptText="No files selected..." HBox.hgrow="ALWAYS" />
+                                                                <Button text="Browse..." />
+                                                            </children>
+                                                        </HBox>
+                                                    </children>
+                                                    <rowConstraints>
+                                                        <RowConstraints minHeight="10.0" prefHeight="80.0" />
+                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                                                    </rowConstraints>
+                                                </GridPane>
+
+                                                <HBox alignment="CENTER_RIGHT" spacing="15.0">
+                                                    <children>
+                                                        <Button mnemonicParsing="false" onAction="#submitClaimToAdjuster" prefHeight="40.0" prefWidth="220.0" style="-fx-background-color: #FF9800; -fx-text-fill: white; -fx-font-weight: bold;" text="Submit Claim to Adjuster" />
+                                                    </children>
+                                                    <VBox.margin><Insets top="20.0" /></VBox.margin>
+                                                </HBox>
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+
+                        <Tab text="Billing Management">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                    <children>
+                                        <VBox layoutX="30.0" layoutY="20.0" prefHeight="600.0" prefWidth="840.0" spacing="15.0">
+                                            <children>
+                                                <Label text="Update Customer Payment Information">
+                                                    <font><Font name="System Bold" size="22.0" /></font>
+                                                </Label>
+                                                <Separator prefWidth="840.0" />
+
+                                                <HBox alignment="CENTER_LEFT" spacing="15.0">
+                                                    <children>
+                                                        <Label style="-fx-font-weight: bold;" text="Customer Policy Number:" />
+                                                        <TextField fx:id="billingPolicySearchField" prefWidth="200.0" promptText="e.g. POL-123" />
+                                                        <Button mnemonicParsing="false" onAction="#fetchBillingDetails" text="Fetch Details" />
+                                                    </children>
+                                                </HBox>
+
+                                                <Separator prefWidth="840.0" />
+
+                                                <Label style="-fx-font-weight: bold;" text="New Payment Details:" />
+                                                <GridPane hgap="15.0" vgap="15.0">
+                                                    <columnConstraints>
+                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="150.0" prefWidth="180.0" />
+                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="200.0" prefWidth="400.0" />
+                                                    </columnConstraints>
+                                                    <children>
+                                                        <Label text="Card / Bank Account #:" />
+                                                        <TextField promptText="XXXX-XXXX-XXXX-XXXX" GridPane.columnIndex="1" />
+                                                        <Label text="Expiry Date:" GridPane.rowIndex="1" />
+                                                        <TextField maxWidth="100.0" promptText="MM/YY" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                        <Label text="CVV / Routing #:" GridPane.rowIndex="2" />
+                                                        <TextField maxWidth="100.0" promptText="123" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                    </children>
+                                                    <rowConstraints>
+                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                                                    </rowConstraints>
+                                                </GridPane>
+
+                                                <HBox alignment="CENTER_RIGHT" spacing="15.0">
+                                                    <children>
+                                                        <Button mnemonicParsing="false" onAction="#updatePaymentMethod" prefHeight="40.0" prefWidth="220.0" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-weight: bold;" text="Update Payment Method" />
+                                                    </children>
+                                                    <VBox.margin><Insets top="20.0" /></VBox.margin>
+                                                </HBox>
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+
+                    </tabs>
+                </TabPane>
+
+                <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="900.0">
+                    <children>
+                        <Button mnemonicParsing="false" onAction="#goBack" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: #E0E0E0; -fx-text-fill: #333333; -fx-font-weight: bold;" text="&lt; Back to Dashboard" />
+                    </children>
+                    <padding>
+                        <Insets bottom="15.0" left="30.0" top="10.0" />
+                    </padding>
+                </HBox>
+
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
